@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
   res.send('API is running');
 });
 
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
 // Route imports
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
